@@ -41,18 +41,30 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIy-0h-3Wg">
                                 <rect key="frame" x="30" y="260" width="46" height="30"/>
                                 <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="create:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnh-qg-wZw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkJ-C5-yrl">
                                 <rect key="frame" x="121" y="260" width="35" height="30"/>
                                 <state key="normal" title="Read"/>
+                                <connections>
+                                    <action selector="read:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DsQ-zA-7gd"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9h-XJ-lg9">
                                 <rect key="frame" x="198" y="260" width="51" height="30"/>
                                 <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O3e-XM-t6x"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIf-JX-JE5">
                                 <rect key="frame" x="292" y="260" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ud1-Lh-cQz"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -81,10 +93,14 @@
                             <constraint firstItem="E9h-XJ-lg9" firstAttribute="top" secondItem="GIf-JX-JE5" secondAttribute="top" id="zvr-zM-ldu"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="age" destination="L3a-Uz-MI7" id="HJh-Ju-TN9"/>
+                        <outlet property="name" destination="D1G-qt-4hw" id="eRG-g5-S6Q"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="78"/>
+            <point key="canvasLocation" x="-97" y="77"/>
         </scene>
     </scenes>
     <resources>
