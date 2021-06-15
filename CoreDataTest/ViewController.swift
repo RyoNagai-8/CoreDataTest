@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ViewController: UIViewController {
     
@@ -18,6 +19,9 @@ class ViewController: UIViewController {
     }
 
     @IBAction func create(_ sender: Any) {
+         //let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
     
     @IBAction func read(_ sender: Any) {
