@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CoreDataTest" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Age" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FIZ-Lb-e2H">
-                                <rect key="frame" x="62" y="175" width="30" height="21"/>
+                                <rect key="frame" x="62" y="131" width="30" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -33,34 +32,34 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kLD-Gx-sG6">
-                                <rect key="frame" x="62" y="105" width="45" height="21"/>
+                                <rect key="frame" x="62" y="61" width="45" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vIy-0h-3Wg">
-                                <rect key="frame" x="30" y="260" width="46" height="30"/>
+                                <rect key="frame" x="30" y="216" width="46" height="30"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
                                     <action selector="create:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tnh-qg-wZw"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wkJ-C5-yrl">
-                                <rect key="frame" x="121" y="260" width="35" height="30"/>
+                                <rect key="frame" x="121" y="216" width="35" height="30"/>
                                 <state key="normal" title="Read"/>
                                 <connections>
                                     <action selector="read:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DsQ-zA-7gd"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E9h-XJ-lg9">
-                                <rect key="frame" x="198" y="260" width="51" height="30"/>
+                                <rect key="frame" x="198" y="216" width="51" height="30"/>
                                 <state key="normal" title="Update"/>
                                 <connections>
                                     <action selector="update:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O3e-XM-t6x"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GIf-JX-JE5">
-                                <rect key="frame" x="292" y="260" width="45" height="30"/>
+                                <rect key="frame" x="292" y="216" width="45" height="30"/>
                                 <state key="normal" title="Delete"/>
                                 <connections>
                                     <action selector="deleteButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ud1-Lh-cQz"/>
@@ -94,7 +93,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="age" destination="L3a-Uz-MI7" id="HJh-Ju-TN9"/>
+                        <outlet property="ageText" destination="L3a-Uz-MI7" id="HJh-Ju-TN9"/>
                         <outlet property="name" destination="D1G-qt-4hw" id="eRG-g5-S6Q"/>
                     </connections>
                 </viewController>

@@ -11,7 +11,7 @@ import CoreData
 class ViewController: UIViewController {
     
     @IBOutlet weak var name: UITextField!
-    @IBOutlet weak var age: UITextField!
+    @IBOutlet weak var ageText: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,9 +19,11 @@ class ViewController: UIViewController {
     }
 
     @IBAction func create(_ sender: Any) {
-         //let appDelegate = UIApplication.shared.delegate as? AppDelegate
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)
+        let age = Int(ageText.text ?? "0")
         
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     }
     
     @IBAction func read(_ sender: Any) {
