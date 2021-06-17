@@ -42,6 +42,23 @@ class ViewController: UIViewController {
     }
     
     @IBAction func read(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Entity")
+        do {
+        let results = try context.fetch(fetchRequest)
+            for data in results{
+                if let name = data.value(forKey: "name") as? String,
+                   let age = data.value(forKey: "age") as? Int{
+                    print("name = \(name), age = \(String(age))")
+                }
+            }
+        } catch {
+            print("Error:\(error)")
+        }
+        
+        
     }
     @IBAction func update(_ sender: Any) {
     }
