@@ -21,8 +21,23 @@ class ViewController: UIViewController {
     @IBAction func create(_ sender: Any) {
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
         let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
-        let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context)
-        let age = Int(ageText.text ?? "0")
+        
+        if let entity = NSEntityDescription.entity(forEntityName: "Entity", in: context),
+           let age = Int(ageText.text ?? "")
+           {
+            let personObject = NSManagedObject(entity: entity, insertInto: context)
+            personObject.setValue(name.text, forKey: "name")
+            personObject.setValue(age, forKey: "age")
+            do{
+                try context.save()
+                print("Success")
+            }catch{
+                print("Error:\(error)")
+            }
+        }
+        
+        
+        
         
     }
     
