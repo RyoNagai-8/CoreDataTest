@@ -60,7 +60,29 @@ class ViewController: UIViewController {
         
         
     }
+    
+    
     @IBAction func update(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Entity")
+        do {
+        let results = try context.fetch(fetchRequest)
+            for data in results{
+                if let name = data.value(forKey: "name") as? String,
+                   let age = data.value(forKey: "age") as? Int{
+                    data.setValue(name + "*", forKey: "name")
+                    data.setValue(age + 1, forKey: "age")
+                    try context.save()
+                    print("Read succes")
+                }
+            }
+        } catch {
+            print("Error:\(error)")
+        }
+        
+        
     }
     @IBAction func deleteButton(_ sender: Any) {
     }
