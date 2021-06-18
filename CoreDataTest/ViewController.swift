@@ -84,8 +84,32 @@ class ViewController: UIViewController {
         
         
     }
+    
     @IBAction func deleteButton(_ sender: Any) {
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        let context: NSManagedObjectContext = appDelegate.persistentContainer.viewContext
+        
+        let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Entity")
+        fetchRequest.predicate = NSPredicate(format: "name contains[cd] %@", "*")
+        
+        do {
+        let results = try context.fetch(fetchRequest)
+            for data in results{
+                
+                context.delete(data)
+                try context.save()
+                print("Delete succes")
+                
+            }
+        } catch {
+            print("Error:\(error)")
+        }
+        
+        
+        
     }
     
 }
+
+struct SomeError: Error {}
 
