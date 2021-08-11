@@ -3,7 +3,7 @@
 //  CoreDataTest
 //
 //  Created by RyoNagai on 2021/06/06.
-//
+//　テストで記入
 
 import UIKit
 import CoreData
